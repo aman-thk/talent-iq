@@ -1,5 +1,4 @@
 import { Inngest } from "inngest";
-import { ENV } from "./env.js";
 import User from "../models/User.js";
 import { connectDB } from "./db.js";
 import { upsertStreamUser } from "./stream.js";
