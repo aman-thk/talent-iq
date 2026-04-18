@@ -10,4 +10,5 @@ export const ENV = {
     INNGEST_SIGNING_KEY: process.env.INNGEST_SIGNING_KEY,
     CLERK_PUBLISHABLE_KEY: process.env.CLERK_PUBLISHABLE_KEY,
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
+    CLIENT_URL: process.env.CLIENT_URL
 };
