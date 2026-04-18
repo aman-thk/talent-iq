@@ -5,6 +5,8 @@ import { connectDB } from "./lib/db.js";
 import { ENV } from "./lib/env.js";
 import { functions, inngest } from "./lib/inngest.js";
 import { serve } from "inngest/express";
+import { clerkMiddleware } from "@clerk/express";
+import chatRoutes from "./routes/chatRoutes.js";
 
 const app = express();
 
@@ -20,6 +22,8 @@ app.use(cors({
     origin: ENV.CLIENT_URL,
     credentials: true,
 }));
+app.use("/api/chat", chatRoutes);
+app.use(clerkMiddleware());
 
 app.use("/api/inngest", serve({
     client: inngest,
